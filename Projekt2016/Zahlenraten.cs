@@ -25,13 +25,17 @@ namespace Projekt2016
 
         int a = 0;
         int c = 0;
-       
+        private Benutzer utzi;
 
-        public Zahlenraten()
+        public Zahlenraten(Benutzer utzi)
         {
             InitializeComponent();
             Initialize();
+
+            this.utzi = utzi;
         }
+
+       
 
         private void Initialize()
         {

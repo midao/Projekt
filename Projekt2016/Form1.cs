@@ -50,10 +50,6 @@ namespace Projekt2016
 
                         utzi = bentzer.ElementAt(i);
 
-                        MessageBox.Show("Erfolgreich");
-
-                        
-
 
                         login = true;
     
@@ -75,7 +71,7 @@ namespace Projekt2016
 
                 else
                 {
-                    Ubersicht u = new Ubersicht();
+                    Ubersicht u = new Ubersicht(utzi);
                     u.Show();
 
                 }
