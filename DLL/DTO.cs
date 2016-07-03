@@ -122,6 +122,24 @@ namespace DLL
             return ka;
         }
 
+        public void KarteVergeben(Benutzer utzi)
+        {
+            con.Open();
+
+            List<Karte> k = KartenAuslesen();
+            Random r = new Random();
+            int i = r.Next(1,k.Count);
+
+            while(i%5 == 0)
+                i = r.Next(1, k.Count);
+
+            OleDbCommand cmd = con.CreateCommand();
+            cmd.CommandText = "insert into Benutzer_Karten values(null," + utzi.ID + "," + i + ")";
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+        }
+
         public List<Kartenset> mkSet(List<Karte> kartenliste)
         {
 

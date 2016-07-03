@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ModelProjekt;
+using DLL;
 
 namespace Projekt2016
 {
     public partial class Zahlenraten : Form
 
     {
+        DTO dto = new DTO();
 
         TextBox[,] boxArray = new TextBox[10, 4];
 
@@ -98,28 +100,52 @@ namespace Projekt2016
 
             if(texBoxCheck()) { 
             vergleichen();
-            korrekt(); 
 
 
-            
+
+                if (korrekt())
+                {
+                    MessageBox.Show("Glückwunsch! Du hast Gewonnen!");
 
 
+                    for (int t = 0; t < 4; t++)
+                    {
+                        boxArray[a, t].Enabled = false;
+
+                        dto.KarteVergeben(utzi);
+
+                    }
+
+
+
+                }
+
+                else { 
                 for (int t = 0; t < 4; t++)
                 {
-                if (a < 9)
-                {
-                    boxArray[a, t].Enabled = false;
-                    boxArray[a + 1, t].Enabled = true;
+
+
+                    
+
                    
-                }
+
+                        if (a < 9)
+                        {
+                            boxArray[a, t].Enabled = false;
+                            boxArray[a + 1, t].Enabled = true;
 
 
 
-                else {
+                        }
 
-                    MessageBox.Show("Pech gehabt! Du hast verloren.");
-                }
 
+
+                        else {
+
+                            MessageBox.Show("Pech gehabt! Du hast verloren.");
+                        }
+
+                    }
                 }
 
 
@@ -130,7 +156,7 @@ namespace Projekt2016
             }
         }
 
-        private void korrekt()
+        private bool korrekt()
         {
             int x = 0;
 
@@ -144,14 +170,21 @@ namespace Projekt2016
                     nummernArray[i].status = false;
                 }
 
+                
+
 
             }
 
-            if(x == 4)
+            if (x == 4)
             {
 
-                MessageBox.Show("Glückwunsch! Du hast Gewonnen!");
+                
+
+                return true;
             }
+
+            else
+                return false;
         }
 
         private bool texBoxCheck()
