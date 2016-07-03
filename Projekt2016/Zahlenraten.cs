@@ -95,7 +95,8 @@ namespace Projekt2016
 
         private void button1_Click(object sender, EventArgs e)
         {
-            texBoxCheck();
+
+            if(texBoxCheck()) { 
             vergleichen();
             korrekt(); 
 
@@ -126,7 +127,7 @@ namespace Projekt2016
             c = 0;
 
 
-
+            }
         }
 
         private void korrekt()
@@ -153,7 +154,7 @@ namespace Projekt2016
             }
         }
 
-        private void texBoxCheck()
+        private bool texBoxCheck()
         {
 
             for(int i = 0; i < 4; i++)
@@ -163,8 +164,12 @@ namespace Projekt2016
                 {
                     MessageBox.Show("Geben sie in jedes Feld eine Zahl ein!");
 
+                    return false;
+
                 }
             }
+
+            return true;
            
         }
 
