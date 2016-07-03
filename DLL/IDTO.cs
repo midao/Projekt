@@ -13,7 +13,7 @@ namespace DLL
         List<Benutzer> BenutzerAuslesen();
         bool BenutzerAnlegen();
         bool BenutzerÄndern();
-        bool SetAnlegen();
+        List<Kartenset> SetsAnzeigen();
         bool KartenAnzeigen();
         Benutzer mcBen(OleDbDataReader dr);
     }

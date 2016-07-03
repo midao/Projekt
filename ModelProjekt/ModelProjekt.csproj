@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="Benutzer.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Kartenset.cs" />
     <Compile Include="Nummer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

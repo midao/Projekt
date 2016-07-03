@@ -12,6 +12,7 @@ namespace DLL
     {
         OleDbConnection con = null;
         List<Benutzer> ben = null;
+        List<Karte> karten = null;
 
         
         public DTO()
@@ -70,10 +71,7 @@ namespace DLL
             throw new NotImplementedException();
         }
 
-        public bool SetAnlegen()
-        {
-            throw new NotImplementedException();
-        }
+  
 
         public Benutzer mcBen(OleDbDataReader dr)
         {
@@ -84,6 +82,75 @@ namespace DLL
             utzer.Passwort = dr.GetString(i++);
             utzer.Punkte = dr.GetInt32(i++);
             return utzer;
+        }
+
+        public List<Karte> KartenAuslesen()
+        {
+            con.Open();
+
+            OleDbCommand cmd = con.CreateCommand();
+            cmd.CommandText = "select * from Karten";
+
+            OleDbDataReader dr = cmd.ExecuteReader();
+
+            karten = new List<Karte>();
+
+            while (dr.Read())
+            {
+                   Karte k = mkKarte(dr);
+                    karten.Add(k);
+
+              
+            }
+
+            con.Close();
+
+            return karten;
+        }
+
+        private Karte mkKarte(OleDbDataReader dr)
+        {
+            Karte ka = new Karte();
+            int i = 0;
+
+          
+        
+            ka.ID = dr.GetInt32(i++);
+            ka.set = dr.GetString(i++);
+            ka.nummer = dr.GetInt32(i++);
+            ka.bild = dr.GetString(i++);
+            return ka;
+        }
+
+        public List<Kartenset> mkSet(List<Karte> kartenliste)
+        {
+
+            List<Kartenset> ks = new List<Kartenset>();
+            Kartenset set = new Kartenset();
+            int i = 0;
+
+            while (i < kartenliste.Count()) {
+
+                set.karten.Add(kartenliste.ElementAt(i));
+
+
+                if (i+1 % 5 == 0)
+                {
+                    set.name = kartenliste.ElementAt(i).set;
+                    set.bild = kartenliste.ElementAt(i).bild;
+
+                    ks.Add(set);
+
+                    set = new Kartenset();
+                }
+            }
+
+            return ks;
+        }
+
+        public List<Kartenset> SetsAnzeigen()
+        {
+            throw new NotImplementedException();
         }
     }
  }

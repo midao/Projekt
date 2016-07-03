@@ -132,6 +132,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Sets.resx">
+      <DependentUpon>Sets.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ubersicht.resx">
       <DependentUpon>Ubersicht.cs</DependentUpon>
     </EmbeddedResource>

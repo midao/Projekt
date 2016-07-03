@@ -25,10 +25,10 @@ namespace Projekt2016.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        public string ConString {
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Alwine\\Documents\\Projekt\\Bilder\\")]
+        public string BilderPfad {
             get {
-                return ((string)(this["ConString"]));
+                return ((string)(this["BilderPfad"]));
             }
         }
     }
