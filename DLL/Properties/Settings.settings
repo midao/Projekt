@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="DbPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\Alwine\Documents\Projekt2016\DLL\bin\Debug\Benutzer.accdb</Value>
+      <Value Profile="(Default)">H:\Projekt\DLL\bin\Debug\Benutzer.accdb</Value>
     </Setting>
     <Setting Name="ConString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;

@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Projekt2016</RootNamespace>
     <AssemblyName>Projekt2016</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -93,6 +93,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Memory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Memory.Designer.cs">
+      <DependentUpon>Memory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Memory.resx">
+      <DependentUpon>Memory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profil.resx">
+      <DependentUpon>Profil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -165,6 +177,78 @@
       <Project>{1f8a7f4b-3257-40d7-93a1-0f9a2c8f436c}</Project>
       <Name>ModelProjekt</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\natsume1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\natsume2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\natsume3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\natsume4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\natsume5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\samumenco1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\samumenco2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\samumenco3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\samumenco4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\samumenco5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shaman1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shaman2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shaman3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shaman4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shaman5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\57UKydQS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google-dk-flat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\huawei-logo-A8D49F5E99-seeklogo.com.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\motorola-logo-old-main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rück.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Samsung-Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sony-logo-amber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

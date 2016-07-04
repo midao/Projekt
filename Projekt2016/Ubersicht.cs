@@ -43,7 +43,8 @@ namespace Projekt2016
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Memory m = new Memory(utzi);
+            m.Show();
         }
     }
 }

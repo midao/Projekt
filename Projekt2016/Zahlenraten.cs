@@ -142,6 +142,8 @@ namespace Projekt2016
 
                         else {
 
+                            t = 4;
+
                             MessageBox.Show("Pech gehabt! Du hast verloren.");
                         }
 
@@ -224,9 +226,30 @@ namespace Projekt2016
 
                 }
 
+        /*        else
+                {
+                    for (int z = 0; z < 4; z++)
+                    {
+
+                        if ((boxArray[a, j].Text == nummernArray[z].ziffer.ToString()) && (nummernArray[z].status == false))
+                        {
+                            labelArray[a, c].Text = "■";
+                            labelArray[a, c].ForeColor = Color.Gray;
+                            c++;
+
+                        }
+
+                        
+
+                    }
+
+                }
+         */
+
+
             }
 
-            for (int j = 0; j < 4; j++)
+           for (int j = 0; j < 4; j++)
 
             {
 
@@ -245,6 +268,7 @@ namespace Projekt2016
 
 
             }
+
         }
     }
     }

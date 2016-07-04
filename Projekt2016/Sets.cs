@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DLL;
 using ModelProjekt;
+using System.Resources;
+using Projekt2016.Properties;
 
 namespace Projekt2016
 {
@@ -16,7 +18,9 @@ namespace Projekt2016
     {
 
         DTO dto = null;
-        List<Kartenset> ks = null;
+        List<Kartenset> ks = new List<Kartenset>();
+
+
         
 
         public Sets()
@@ -29,19 +33,28 @@ namespace Projekt2016
         {
             dto = new DTO();
 
-            
-           ks =  dto.mkSet(dto.KartenAuslesen());
+
+            ks = dto.mkSet(dto.KartenAuslesen());
 
             PictureBox[] bildArray = new PictureBox[ks.Count];
 
+            var ResourceManager =
+    new System.Resources.ResourceManager(
+        "YourAssembly.Properties.Resources",
+        typeof(Resources).Assembly);
             int i = 0;
 
             while(i < ks.Count)
             {
-               
+                
 
-                String s = Properties.Settings.Default.BilderPfad + ks.ElementAt(i).bild;
-                bildArray[i].Image = Image.FromFile(s);
+                object obj = ResourceManager.GetObject(ks.ElementAt(i).bild);
+
+                bildArray[i].Image = ((System.Drawing.Bitmap)(obj));
+
+
+                
+                i++;
 
             }
 

@@ -18,7 +18,15 @@ namespace Projekt2016
         public Profil(Benutzer utzi)
         {
             InitializeComponent();
+            
             this.utzi = utzi;
+            Initialize();
+        }
+
+        private void Initialize()
+        {
+            labelName.Text = utzi.Benutzername;
+            label1.Text = Convert.ToString(utzi.Punkte);
         }
 
     }

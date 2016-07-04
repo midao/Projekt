@@ -97,7 +97,7 @@ namespace DLL
 
             while (dr.Read())
             {
-                   Karte k = mkKarte(dr);
+                    Karte k = mkKarte(dr);
                     karten.Add(k);
 
               
@@ -152,7 +152,9 @@ namespace DLL
                 set.karten.Add(kartenliste.ElementAt(i));
 
 
-                if (i+1 % 5 == 0)
+                //Die 5. Karte in der Datenbank ist die Setkarte
+
+                if ((i+1) % 5 == 0)
                 {
                     set.name = kartenliste.ElementAt(i).set;
                     set.bild = kartenliste.ElementAt(i).bild;
@@ -161,6 +163,8 @@ namespace DLL
 
                     set = new Kartenset();
                 }
+
+                i++;
             }
 
             return ks;
