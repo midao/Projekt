@@ -13,5 +13,6 @@ namespace ModelProjekt
         public string Passwort { get; set; }
         public int Punkte { get; set; }
 
+
     }
 }
